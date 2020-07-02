@@ -4,7 +4,7 @@
 ##print('I am '+str(29)+' years old.')
 ##print("What is your age?")
 ##my_age=input("Please write down your age.: ") #input의 결과값은 항상 str
-##print("You will be "+str(int(my_age)+1)+" in a year.")  
+##print("You will be "+str(int(my_age)+1)+" in a year.")
 ##print('My name is ')
 ##for i in range(5):
 ##    print('Jimmy Five Times ('+str(i)+')')
@@ -117,8 +117,52 @@
 ##import random
 ##messages=['good','better','best','bad','worse','worst']
 ##print(messages[random.randint(0,len(messages)-1)])
-    
+
 ##messages=['good','better','best','bad','worse','worst']
 ##messages=tuple(messages)
 ##print(type(messages))
-    
+
+#p.134
+# spam={'color':'red','age':42}
+# print(spam.keys())
+# print(list(spam.keys()))
+
+# spam={'color':'red','age':42}
+# for k,v in spam.items():
+#     print('Key:'+k+' Value:'+str(v))
+
+#p.135
+# picnicItems={'apples':5, 'cups':2}
+# print('I am bringing '+str(picnicItems.get('cups',0))+' cups.')
+
+#p.136 setdefault(): key값이 존재하지 않을 경우 키 값 설정할 때 사용
+#(key값이 이미 있는 경우는 변경되지 않음을 주의!)
+# spam={'name':'Pooka','age':5}
+# spam.setdefault('color','black')
+# print(spam)
+# spam.setdefault('color','white')
+# print(spam)
+
+#p.142
+# theBoard={'top-L':'O','top-M':'O','top-R':'O','mid-L':'X','mid-M':'X','mid-R':' ','low-L':' ','low-M':' ','low-R':'X'}
+# def printBoard(board):
+#     print(board['top-L']+'l'+board['top-M']+'l'+board['top-R'])
+#     print('-+-+-')
+#     print(board['mid-L']+'l'+board['mid-M']+'l'+board['mid-R'])
+#     print('-+-+-')
+#     print(board['low-L']+'l'+board['low-M']+'l'+board['low-R'])
+# printBoard(theBoard)
+
+#p.145
+# allGuests={'Alice':{'apples':5,'pretzels':12},'Bob':{'ham sandwiches':3,'apples':2},'Carol':{'cups':3,'apple pies':1}}
+# def totalBrought(guests,item):
+#     numBrought=0
+#     for k,v in guests.items():
+#         numBrought=numBrought+v.get(item,0)
+#     return numBrought
+# print('Number of things being brought:')
+# print('-Apples '+str(totalBrought(allGuests,'apples')))
+# print('-Cups '+str(totalBrought(allGuests,'cups')))
+# print('-Cakes '+str(totalBrought(allGuests,'cakes')))
+# print('-Ham sandwiches '+str(totalBrought(allGuests,'ham sandwiches')))
+# print('-Apple pies '+str(totalBrought(allGuests,'apple pies')))

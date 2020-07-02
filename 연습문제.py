@@ -56,7 +56,7 @@
 ##    else:
 ##        result=(number*3)+1
 ##        return result
-##    
+##
 ##while True:
 ##    try:
 ##        number=int(input("콜라츠 수열에 넣을 숫자를 적어주세요.: "))
@@ -75,3 +75,35 @@
 ##        print(str(list[i]),end=',')
 ##    print(str(list[i+1]))
 ##edit_list(animal)
+
+#p.147
+Inventory={'rope':1,'torch':6,'gold coin':42,'dagger':1,'arrow':12}
+# def displayInventory(Inventory):
+#     print("Inventory:")
+#     totalNum=0
+#     for tools,num in Inventory.items():
+#         print(str(num)+" "+tools)
+#         totalNum+=num
+#     print("Total number of items:"+str(totalNum))
+# displayInventory(Inventory)
+
+#p.149미완성본
+# dragonLoot=['gold coin','dagger','gold coin','gold coin','ruby']
+# def addTolinventory(inventory,addedItems):
+#     dragonLoot_Dic={}
+#     for addedItems in dragonLoot:
+#         dragonLoot_Dic[addedItems]=0
+#     for inventory in dragonLoot:
+#         dragonLoot[inventory]=dragonLoot[inventory]+1
+#     print(dragonLoot_Dic)
+# addTolinventory(inventory,addedItems)
+
+#참고: list -> dic변환 코드
+# list_example = ['a', 'b', 'c', 'd', 'a', 'b', 'c', 'a', 'b', 'a']
+# remove_overlap = list(set(list_example))
+# dic = {}
+# for list_name in remove_overlap:
+#     dic[list_name] = 0
+# for list_count in list_example:
+#     dic[list_count] = dic[list_count] + 1
+# print(dic)
